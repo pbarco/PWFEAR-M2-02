@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Componentes Web con JQuery</title>
+    <link rel="stylesheet" src="/css/jquery.fancybox.min.css">
+  </head>
+  <body>
+    <h1>Componentes Web con JQuery</h1>
+<!-- Componente JQuery Cycle -->
+<!-- Configs embebidas en HTML
+    <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-pause-on-hover="true" data-cycle-speed="200">-->
+    <div id="slider">
+      <a href="http://malsup.github.io/images/p1.jpg">
+        <img src="http://malsup.github.io/images/p1.jpg" width="100">
+      </a>
+      <a href= "http://malsup.github.io/images/p2.jpg">
+        <img src="http://malsup.github.io/images/p2.jpg" width="100">
+      </a>
+      <a href="http://malsup.github.io/images/p3.jpg">
+        <img src="http://malsup.github.io/images/p3.jpg" width="100">
+      </a>
+      <a href="http://malsup.github.io/images/p4.jpg">
+        <img src="http://malsup.github.io/images/p4.jpg" width="100">
+      </a>
+    </div>
+<!-- Componente JQuery Cycle -->
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("#slider").cycle({
+            speed: 600,
+            fx: "scrollHorz"
+          })
+
+      $("#slider a").fancybox({
+        loop: true
+      })
+
+      })
+    </script>
+
+  </body>
+</html>
